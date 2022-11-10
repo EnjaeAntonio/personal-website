@@ -11,9 +11,14 @@
    }
 
    body {
+    background: rgb(20 24 28 / .75);
+}
+
+.landing-page-bg {
+    height: 80vh;
     background-color: #ebeef3;
-    margin-top: 20px;
-   }
+    width: 100%;
+}
 
 /* ---------------------------------------------------- */
 /* Header
@@ -99,3 +104,23 @@ nav ul li + li {
 /* ---------------------------------------------------- */
 /* About me
 /* ---------------------------------------------------- */
+
+.about {
+    display: flex;
+}
+
+.about-text {
+    height: 100%;
+    width: 60%;
+    text-align: center;
+   
+}
+
+.about-text h1 {
+    font-size: 52px;
+}
+
+img {
+    border-radius: 20px;
+    width: 350px;
+}
