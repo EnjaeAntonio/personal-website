@@ -15,12 +15,12 @@ html {
 
 }
 body {
-    background: #ebeef3;
+    background: #fff;
 }
 
 .header-wrapper {
     height: 100vh;
-    background-color: #fff;
+    background-color: #ebeef3;
     width: 100%;
 }
 
@@ -276,6 +276,7 @@ h3:hover{
 /* ---------------------------------------------------- */
 
 footer {
+    background-color: #ebeef3;
     display: flex;
     justify-content: center;
     padding-top: 70px;
