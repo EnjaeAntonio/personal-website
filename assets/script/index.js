@@ -26,11 +26,26 @@ function select(selector, parent = document) {
 
 const aboutBtn = select('.about-btn'); 
 const contactBtn = select('.contact-btn');
+const navAbout = select('.about-me-btn')
+const navContact = select('.contact-me-btn')
+
+onEvent('click', navAbout, function() {
+    const aboutPage = select('.about');
+    aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+});
+
+onEvent('click', navContact, function() {
+    const aboutPage = select('footer');
+    aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+});
+
 
 onEvent('click', aboutBtn, function() {
     const aboutPage = select('.about');
     aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
 });
+
+
 
 onEvent('click', contactBtn, function() {
     const contactPage = select('footer');
