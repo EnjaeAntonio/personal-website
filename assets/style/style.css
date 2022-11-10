@@ -161,6 +161,7 @@ p {
     font-size: 16px;
     font-weight: 400;
     width: 80%;
+    padding-top: 6px;
 }
 
 .fa-minus{
@@ -431,9 +432,6 @@ transform: translateY(0px);
     .title {
         width: 100%;
     }
-    .title h1 {
-        font-size: 24px;
-    }
     nav{
         display: none;
     }
@@ -463,9 +461,6 @@ transform: translateY(0px);
     }
     .row {
         height: 100vh;
-    }
-    .title h1 {
-        font-size: 24px;
     }
     nav ul li a {
         font-size: 12px;
