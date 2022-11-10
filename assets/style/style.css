@@ -20,7 +20,7 @@ body {
 
 .header-wrapper {
     height: 100vh;
-    background: rgb(255, 0, 0)url(../img/photo-1519445239716-9e1f385160a0.avif) center center / cover no-repeat fixed;
+    background: rgb(255, 0, 0)url(../img/photo-1477346611705-65d1883cee1e.avif) center center / cover no-repeat fixed;
     width: 100%;
 }
 
@@ -49,19 +49,19 @@ header {
 .title h1 {
     font-size: 32px;
     font-weight: 400;
-    color: #000;
+    color: rgb(255, 255, 255);
     line-height: 56px;
     letter-spacing: 0.2px;
 }
 .title h1 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-shadow: 1px #000;
 }
 
 .span-title {
     font-weight: 900;
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 nav {
@@ -109,7 +109,7 @@ nav ul li + li {
     margin: 5px;
     padding: 9px;
     border-radius: 50%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
