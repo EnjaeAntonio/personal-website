@@ -170,7 +170,7 @@ nav ul li + li {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     width: 80%;
     padding-top: 6px;
@@ -439,6 +439,7 @@ transform: translateY(0px);
         width: 100%;
     }
     .name {
+        width: 60%;
         font-size: 24px;
         line-height: 25px;
     }
@@ -499,9 +500,20 @@ transform: translateY(0px);
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 428px) {
     nav ul li a {
         font-size: 10px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    img {
+        width: 280px;
     }
 }
 
