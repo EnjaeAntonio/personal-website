@@ -20,8 +20,7 @@ body {
 
 .header-wrapper {
     height: 100vh;
-    background: rgb(255, 0, 0)url(../img/photo-1656788519906-b9becc2a6833.avif) center center / cover no-repeat fixed;
-    width: 100%;
+    background: rgb(255, 0, 0)url(../img/photo-1492573637402-25691cd9eac2.avif) center center / cover ;
 }
 
 .overlay {
@@ -123,6 +122,7 @@ nav ul li + li {
 .fa-bars {
     font-size: 20px;
     visibility: hidden;
+    color: #fff;
 }
 
 .about-me-text{
