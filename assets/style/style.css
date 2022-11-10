@@ -406,6 +406,9 @@ transform: translateY(0px);
 }
 
 @media (max-width: 787px) {
+    .landing-text{
+        width: 70%;
+    }
     .column {
         width: 100%;
     }
@@ -429,6 +432,9 @@ transform: translateY(0px);
 
 
 @media (max-width: 603px) {
+    .about-me-text{
+        font-size: 26px;
+    }
     .title h1 {
         font-size: 26px;
     }
@@ -447,6 +453,9 @@ transform: translateY(0px);
 }
 
 @media (max-width: 520px) {
+    .landing-text{
+        width: 80%;
+    }
     .name {
         font-size: 18px;
     }
@@ -501,6 +510,13 @@ transform: translateY(0px);
 }
 
 @media (max-width: 428px) {
+    .landing-text{
+        width: 80%;
+    }
+    .about-me-text{
+        font-size: 24px
+    }
+
     nav ul li a {
         font-size: 10px;
     }
