@@ -49,13 +49,14 @@ header {
 .title h1 {
     font-size: 32px;
     font-weight: 400;
-    color: rgb(47, 47, 47);
+    color: #000;
     line-height: 56px;
     letter-spacing: 0.2px;
 }
 .title h1 a {
     text-decoration: none;
-    color: #000;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px #000;
 }
 
 .span-title {
@@ -81,7 +82,7 @@ nav ul li{
 nav ul li a {
     font-size: 14px;
     letter-spacing: 1px;
-    color: rgb(0, 0, 0);
+    color: #fff;
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;
