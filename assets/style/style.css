@@ -7,16 +7,19 @@
     --app-purple: #833cff;
     --app-orange: #ff833c;
     --app-blue: #0bb3e4;
-    --app-blue-hover: #364ee6;
+    --app-blue-hover: #068ab3;
     --app-span-colour: #0363ff;
    }
 
+html {
+
+}
 body {
     background: #ebeef3;
 }
 
 .header-wrapper {
-    height: 80vh;
+    height: 100vh;
     background-color: #fff;
     width: 100%;
 }
@@ -113,6 +116,8 @@ nav ul li + li {
 }
 
 .about-me-text{
+    font-size: 28px;
+    text-align: center;
     font-weight: 400;
 }
 
@@ -121,6 +126,7 @@ nav ul li + li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease-in-out;
     height: 100%;
     width: 100%;
     padding-bottom: 15vh;
@@ -137,15 +143,13 @@ nav ul li + li {
     display: flex;
     align-items: center;
     padding: 60px 0;
+    height: 100vh;
 }
 
 .about-wrapper{
     width: 60%;
 }
 
-.responsive-image {
-    display: none;
-}
 
 .name {
     width: 40%;
@@ -175,7 +179,12 @@ button {
     padding: 13px 35px;
     text-align: center;
 	text-decoration:none;
+    transition: all .5s ease-in-out;
 	text-shadow:0px 1px 0px #2f6627;
+}
+
+button:hover{
+    background-color: var(--app-blue-hover);
 }
 
 img {
@@ -244,7 +253,22 @@ h3:hover{
     color: #fff;
     padding: 10px;
     border-radius: 50%;
+    transition: all .3s ease-in-out;
 }
+
+.fa-phone:hover{
+    cursor: pointer;
+    background-color: var(--app-blue-hover);
+    translate: 0 -5px;
+}
+
+.fa-envelope:hover{
+    cursor: pointer;
+    background-color: var(--app-blue-hover);
+    translate: 0 -5px;
+}
+
+
 
 /* ---------------------------------------------------- */
 /* Footer
@@ -305,12 +329,44 @@ h4{
     color: #3b5998;
 }
 
+.about-me-text {
+    animation: my-name .8s ease-in;
+    animation-delay: .2s;
+}
+
+@keyframes my-name {
+from {
+    opacity: 0;
+    transform: translatey(20px)
+}
+to {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+
+.more-btn-box {
+animation: my-name .8s ease-in;
+animation-delay: .2s;
+}
+
+@keyframes about-me-btn {
+from {
+opacity: 0;
+transform: translatey(20px)
+}
+to {
+opacity: 1;
+transform: translateY(0px);
+}
+}
+
 /* ---------------------------------------------------- */
 /* Media Queries
 /* ---------------------------------------------------- */
-/* 768px and down */
 
-@media (max-width: 880px){
+
+@media (max-width: 900px){
     .nav-icons{
         visibility: hidden;
     }
@@ -330,7 +386,7 @@ h4{
         width: 100%;
     }
     .name {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 36px;
     }
    
@@ -359,7 +415,7 @@ h4{
         width: 100%;
     }
     .name {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 25px;
     }
    
@@ -385,7 +441,6 @@ h4{
     }
 
     .name {
-        font-size: 19px;
         line-height: 24px;
         width: 100%;
     }
@@ -406,9 +461,6 @@ h4{
     .about-wrapper {
         width: 100%;
     }
-    img {
-       width: 200px;
-    }
     .row {
         height: 100vh;
     }
@@ -423,7 +475,7 @@ h4{
     }
 
     .name {
-        font-size: 21px;
+        font-size: 26px;
         line-height: 24px;
     }
 
@@ -454,7 +506,7 @@ h4{
         display: none;
     }
     img {
-        width: 180px;
+        width: 240px;
     }
 }
 
@@ -469,13 +521,5 @@ h4{
         width: 100%;
         font-size: 24px;
     }
-    img {
-        display: none;
-    }
 }
 
-@media (max-width: 310px) {
-    button{
-        display: none;
-    }
-}
