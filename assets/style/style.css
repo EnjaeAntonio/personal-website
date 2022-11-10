@@ -8,10 +8,11 @@
     --app-orange: #ff833c;
     --app-blue: #0bb3e4;
     --app-blue-hover: #364ee6;
+    --app-span-colour: #0363ff;
    }
 
    body {
-    background: rgb(20 24 28 / .75);
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .landing-page-bg {
@@ -49,7 +50,7 @@ header {
     line-height: 56px;
     letter-spacing: 0.2px;
 }
-span {
+.span-title {
     font-weight: 900;
 }
 
@@ -115,7 +116,7 @@ nav ul li + li {
 }
 
 
- h2 {
+.name {
     width: 40%;
     line-height: 60px;
     font-size: 52px;
@@ -150,4 +151,86 @@ img {
     margin-top: 5px;
     border-radius: 20px;
     width: 340px;
+}
+
+/* ---------------------------------------------------- */
+/* About me
+/* ---------------------------------------------------- */
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    margin-top: 20px;
+    width: 60%;
+    height: 50vh;
+}
+
+.column {
+    flex-grow: 1;
+    width: calc(50% - 10px);
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 0.1);
+    background-color: #ebeef3;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+}
+
+h2{
+    text-align: left;
+    line-height: 50px;
+    font-size: 32px;
+}
+
+h3 {
+  font-weight: 400;
+  text-align: left;  
+  color: var(--app-span-colour);
+}
+
+h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.contact-info {
+    height: 100px;
+}
+
+.fa-phone, .fa-envelope {
+    font-size: 40px;
+    background-color: var(--app-blue);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------- */
+/* Footer
+/* ---------------------------------------------------- */
+
+footer {
+    display: flex;
+}
+
+.social-media{
+    width: 50%;
+}
+
+.copyright{
+    position: relative;
+    width: 50%;
+}
+
+h4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* 768px and down */
+
+@media (max-width: 849px) {
+    .column {
+        width: 100%;
+    }
 }
