@@ -11,7 +11,7 @@
     --app-span-colour: #0363ff;
    }
 
-   body {
+body {
     background: rgba(255, 255, 255, 0.75);
 }
 
@@ -31,7 +31,7 @@
 
 header {
     height: 56px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .flexbox {
@@ -94,13 +94,17 @@ nav ul li + li {
 }
 
 .fa-brands {
+    overflow: hidden;
     margin: 5px;
     padding: 9px;
-    border: 2px solid rgba(56, 55, 55, 0.1);
     border-radius: 50%;
     color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
+.fa-bars {
+    visibility: hidden;
+}
 
 /* ---------------------------------------------------- */
 /* About me
@@ -115,6 +119,9 @@ nav ul li + li {
     width: 60%;
 }
 
+.responsive-image {
+    display: none;
+}
 
 .name {
     width: 40%;
@@ -154,8 +161,10 @@ img {
 }
 
 /* ---------------------------------------------------- */
-/* About me
+/* Contact Page
 /* ---------------------------------------------------- */
+
+
 
 .row {
     display: flex;
@@ -211,26 +220,142 @@ h3:hover{
 
 footer {
     display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.footer-nav{
+    width: 100%;
 }
 
 .social-media{
-    width: 50%;
+    text-align: center;
 }
 
+
 .copyright{
-    position: relative;
-    width: 50%;
+    text-align: center;
 }
 
 h4{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    font-size: 14px;
+    font-weight: 400;
 }
+
+
+
+/* ---------------------------------------------------- */
+/* Icons
+/* ---------------------------------------------------- */
+
+.fa-linkedin {
+    color: #0072b1;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+/* ---------------------------------------------------- */
+/* Media Queries
+/* ---------------------------------------------------- */
 /* 768px and down */
 
-@media (max-width: 849px) {
+@media (max-width: 859px){
+    .nav-icons{
+        visibility: hidden;
+    }
+
+    .fa-bars {
+        visibility: visible;
+    }
+
+    .name {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
     .column {
         width: 100%;
     }
+    .name {
+        font-size: 30px;
+    }
+   
+}
+
+@media (max-width: 595px) {
+    .column {
+        width: 100%;
+    }
+    .name {
+        font-size: 26px;
+        line-height: 25px;
+    }
+   
+}
+
+
+@media (max-width: 480px) {
+    .title {
+        width: 20%;
+    }
+    .title h1 {
+        font-size: 24px;
+    }
+    nav{
+        font-size: 16px;
+    }
+    .nav-icon {
+    }
+
+    .name {
+        font-size: 21px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 430px) {
+    .about {
+        display: grid;
+        height: 100%;
+    }
+    .about-wrapper {
+        width: 100%;
+    }
+    img {
+       width: 200px;
+       overflow: hidden;
+    }
+    .row {
+        height: 100vh;
+    }
+    .title h1 {
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 9px;
+    }
+    .nav-icon {
+        width: 10%;
+    }
+
+    .name {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
 }
