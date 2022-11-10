@@ -207,6 +207,9 @@ img {
     padding: 60px 0;
 }
 
+.contact-info p {
+    text-align: left;
+}
 
 .row {
     display: flex;
