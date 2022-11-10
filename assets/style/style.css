@@ -1,5 +1,23 @@
 @import "./reset.css";
 
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+   }
+
+   body {
+    background-color: #ebeef3;
+    margin-top: 20px;
+   }
+
+/* ---------------------------------------------------- */
+/* Header
+/* ---------------------------------------------------- */
 .container {
     width: min(100% - 30px, 1080px);
     margin-inline: auto;
@@ -7,7 +25,6 @@
 
 header {
     height: 56px;
-    background-color: var(--clr-primary);
     overflow: hidden;
 }
 
@@ -16,23 +33,25 @@ header {
 }
 
 .title {
-    width: 40%;
+    width: 20%;
     height: 40px;
 }
 
 .title h1 {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 400;
-    color: #fff;
+    color: rgb(47, 47, 47);
     line-height: 56px;
-    text-transform: uppercase;
     letter-spacing: 0.2px;
+}
+span {
+    font-weight: 900;
 }
 
 nav {
-    width: 60%;
+    width: 62%;
     text-align: right;
-}
+    }
 
 nav ul {
     list-style: none;
@@ -45,10 +64,10 @@ nav ul li{
 }
 
 nav ul li a {
-    font-size: 19px;
+    font-size: 14px;
     letter-spacing: 1px;
-    color: #fff;
-    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
     text-decoration: none;
     cursor: pointer;
 }
@@ -60,3 +79,23 @@ nav ul li a:hover {
 nav ul li + li {
     margin-left: 18px;
 }
+
+.nav-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 18%;
+}
+
+.fa-brands {
+    margin: 5px;
+    padding: 9px;
+    border: 2px solid rgba(56, 55, 55, 0.1);
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+}
+
+
+/* ---------------------------------------------------- */
+/* About me
+/* ---------------------------------------------------- */
