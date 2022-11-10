@@ -20,7 +20,7 @@ body {
 
 .header-wrapper {
     height: 100vh;
-    background-color: #ebeef3;
+    background: rgb(255, 0, 0)url(../img/photo-1519445239716-9e1f385160a0.avif) center center / cover no-repeat fixed;
     width: 100%;
 }
 
@@ -60,6 +60,7 @@ header {
 
 .span-title {
     font-weight: 900;
+    color: #000;
 }
 
 nav {
@@ -84,10 +85,11 @@ nav ul li a {
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;
+    transition: all 0.2s ease-in;
 }
 
 nav ul li a:hover {
-    text-decoration: underline #add8e6;
+    color: #add8e6;
 }
 
 nav ul li + li {
@@ -119,6 +121,7 @@ nav ul li + li {
     font-size: 28px;
     text-align: center;
     font-weight: 400;
+    color: #fff;
 }
 
 .text-and-btn {
