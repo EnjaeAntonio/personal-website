@@ -12,12 +12,12 @@
    }
 
 body {
-    background: rgba(255, 255, 255, 0.75);
+    background: #ebeef3;
 }
 
-.landing-page-bg {
+.header-wrapper {
     height: 80vh;
-    background-color: #ebeef3;
+    background-color: #fff;
     width: 100%;
 }
 
@@ -50,6 +50,11 @@ header {
     line-height: 56px;
     letter-spacing: 0.2px;
 }
+.title h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
 .span-title {
     font-weight: 900;
 }
@@ -103,7 +108,25 @@ nav ul li + li {
 }
 
 .fa-bars {
+    font-size: 20px;
     visibility: hidden;
+}
+
+.about-me-text{
+    font-weight: 400;
+}
+
+.text-and-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 15vh;
+}
+.landing-text {
+    width: 50%;
 }
 
 /* ---------------------------------------------------- */
@@ -113,6 +136,7 @@ nav ul li + li {
 .about {
     display: flex;
     align-items: center;
+    padding: 60px 0;
 }
 
 .about-wrapper{
@@ -126,7 +150,7 @@ nav ul li + li {
 .name {
     width: 40%;
     line-height: 60px;
-    font-size: 52px;
+    font-size: 50px;
 }
 
 p {
@@ -164,6 +188,10 @@ img {
 /* Contact Page
 /* ---------------------------------------------------- */
 
+.contact-wrapper {
+    background-color: #fff;
+    padding: 60px 0;
+}
 
 
 .row {
@@ -282,7 +310,7 @@ h4{
 /* ---------------------------------------------------- */
 /* 768px and down */
 
-@media (max-width: 859px){
+@media (max-width: 880px){
     .nav-icons{
         visibility: hidden;
     }
@@ -292,12 +320,12 @@ h4{
     }
 
     .name {
-        font-size: 44px;
+        font-size: 42px;
         line-height: 44px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 787px) {
     .column {
         width: 100%;
     }
@@ -308,19 +336,19 @@ h4{
    
 }
 
-@media (max-width: 674px) {
+@media (max-width: 708px) {
     .column {
         width: 100%;
     }
     .name {
-        font-size: 30px;
+        font-size: 28px;
         line-height: 36px;
     }
    
 }
 
 
-@media (max-width: 595px) {
+@media (max-width: 603px) {
     .title h1 {
         font-size: 26px;
     }
@@ -331,7 +359,7 @@ h4{
         width: 100%;
     }
     .name {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 25px;
     }
    
@@ -339,19 +367,19 @@ h4{
 
 @media (max-width: 520px) {
     .name {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 480px) {
     .title {
-        width: 20%;
+        width: 100%;
     }
     .title h1 {
         font-size: 24px;
     }
     nav{
-        font-size: 16px;
+        display: none;
     }
     .nav-icon {
     }
@@ -446,7 +474,7 @@ h4{
     }
 }
 
-@media (max-width: 305px) {
+@media (max-width: 310px) {
     button{
         display: none;
     }
