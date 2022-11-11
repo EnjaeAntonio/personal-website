@@ -465,7 +465,7 @@ transform: translateY(0px);
     .title {
         width: 100%;
     }
-    nav{
+    .header-nav{
         display: none;
     }
     .nav-icon {
