@@ -482,17 +482,34 @@ transform: translateY(0px);
 }
 
 @media (max-width: 450px) {
-    .name{
-        width: 100%;
-    }
     .about {
         display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+    p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .name{
+        text-align: center;
     }
     .about-wrapper {
         width: 100%;
     }
     .row {
         height: 100vh;
+    }
+    .image-of-me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        padding: 20px 0;
+        width: 400px;
     }
     nav ul li a {
         font-size: 12px;
@@ -527,8 +544,8 @@ transform: translateY(0px);
     p {
         font-size: 18px;
     }
-    img {
-        width: 280px;
+    img{
+        width: 350px;
     }
 }
 
@@ -554,7 +571,7 @@ transform: translateY(0px);
         display: none;
     }
     img {
-        width: 240px;
+        width: 300px;
     }
 }
 
