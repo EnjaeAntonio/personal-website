@@ -28,6 +28,7 @@ const aboutBtn = select('.about-btn');
 const contactBtn = select('.contact-btn');
 const navAbout = select('.about-me-btn')
 const navContact = select('.contact-me-btn')
+const hamburgerBtn = select('.fa-bars')
 
 onEvent('click', navAbout, function() {
     const aboutPage = select('.about');
@@ -51,3 +52,11 @@ onEvent('click', contactBtn, function() {
     const contactPage = select('footer');
     contactPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
 });
+
+onEvent('click', hamburgerBtn, function() {
+    var x = select('.topnav');
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else 
+      x.style.display = "block";
+  });
