@@ -19,8 +19,11 @@ body {
 }
 
 .header-wrapper {
+
     height: 100vh;
-    background: rgb(255, 0, 0)url(../img/photo-1492573637402-25691cd9eac2.avif) center center / cover ;
+    background-image: url(../img/2022October25_dsc03014.jpg);
+    background-size: 100%;
+    background-position: 97% 3%;
 }
 
 .overlay {
@@ -119,17 +122,17 @@ nav ul li + li {
 .topnav ul li a{
     color: #fff;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     text-align: left;
 }
 
-.topnav-icons {
+/* .topnav-icons {
     display: grid;
-}
+} */
 
 .topnav-icons a i {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-icon {
@@ -137,6 +140,10 @@ nav ul li + li {
     justify-content: flex-end;
     align-items: center;
     width: 18%;
+}
+
+.nav-icon a {
+    font-size: 18px;
 }
 
 .fa-brands {
@@ -400,7 +407,7 @@ to {
 
 .more-btn-box {
 position: absolute;
-bottom: 0px;
+bottom: 125px;
 animation: my-name .8s ease-in;
 animation-delay: .2s;
 }
@@ -431,17 +438,17 @@ transform: translateY(0px);
         visibility: visible;
     }
     .mobile-nav{
-        width: 40%;
+        width: 50%;
         display: grid;
         justify-content: right;
     }
  
+    .title{
+        width: 50%;
+    }
     .hamburger i {
         font-size: 28px;
         line-height: 56px;
-    }
-    .title{
-        width: 60%;
     }
     .name {
         font-size: 42px;
@@ -501,19 +508,21 @@ transform: translateY(0px);
    
 }
 
-@media (max-width: 520px) {
+@media (max-width: 526px) {
     .landing-text{
         width: 80%;
     }
     nav ul li a {
         font-size: 14px;
     }
+    .topnav ul li {
+        margin-bottom: 2px;
+    }
+
 }
 
 @media (max-width: 480px) {
-    .title {
-        width: 100%;
-    }
+
     .header-nav{
         display: none;
     }
@@ -526,7 +535,15 @@ transform: translateY(0px);
     p {
         font-size: 16px;
     }
-  
+    .mobile-nav{
+        width: 50%;
+        display: grid;
+        justify-content: right;
+    }
+ 
+    .title{
+        width: 50%;
+    }
 
 }
 
@@ -596,14 +613,8 @@ transform: translateY(0px);
 
 
 @media (max-width: 380px) {
-    .title {
-        width: 50%;
-    }
     .title h1 {
         font-size: 28px;
-    }
-    .nav-icon{
-        width: 50%;
     }
     .footer-nav ul li a {
         font-size: 14px;
@@ -618,12 +629,16 @@ transform: translateY(0px);
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 340px) {
     .landing-page-bg{
         height: 50vh;
     }
-    .title {
-        width: 80%;
+    .mobile-nav{
+        width: 60%;
+    }
+ 
+    .title{
+        width: 40%;
     }
     .name {
         width: 100%;
