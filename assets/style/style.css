@@ -110,13 +110,13 @@ nav ul li + li {
 }
 
 .topnav{
+    display: none;
     text-align: center;
-    padding: 10px 20px;
-    border: 1px solid var(--app-dark-bg);
+    padding: 5px 15px;
 }
 
 .topnav ul li {
-    margin-bottom: 16px;
+    margin-bottom: 8gipx;
 }
 
 .topnav ul li a{
