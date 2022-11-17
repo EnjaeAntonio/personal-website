@@ -9,6 +9,7 @@
     --app-blue: #0bb3e4;
     --app-blue-hover: #068ab3;
     --app-span-colour: #0363ff;
+    --app-dark-bg: #1a1d28;
    }
 
 html {
@@ -42,7 +43,8 @@ body {
 }
 
 header {
-    height: 56px;
+    height: 62px;
+    background-color: rgb(0, 0, 0, .1);
 }
 
 .flexbox {
@@ -98,7 +100,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #add8e6;
+    color: var(--app-blue);
 }
 
 nav ul li + li {
@@ -119,14 +121,19 @@ nav ul li + li {
     margin-bottom: 8px;
 }
 
+
 .topnav ul li a{
     color: #fff;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
     text-align: left;
+    transition: all .2s ease-in-out;
 }
 
+.topnav ul li a:hover {
+    color: var(--app-blue);
+}
 /* .topnav-icons {
     display: grid;
 } */
@@ -144,6 +151,10 @@ nav ul li + li {
 
 .nav-icon a {
     font-size: 18px;
+}
+
+.nav-icon a {
+
 }
 
 .fa-brands {
