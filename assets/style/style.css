@@ -249,6 +249,12 @@ button:hover{
     background-color: var(--app-blue-hover);
 }
 
+.img-context {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
 img {
     margin-top: 5px;
     border-radius: 20px;
