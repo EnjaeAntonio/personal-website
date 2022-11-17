@@ -54,7 +54,7 @@ onEvent('click', contactBtn, function() {
 });
 
 onEvent('click', hamburgerBtn, function() {
-    var x = select('.topnav');
+    let x = select('.topnav');
     if (x.style.display === "block") {
       x.style.display = "none";
     } else 
