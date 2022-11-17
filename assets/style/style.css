@@ -111,12 +111,12 @@ nav ul li + li {
 
 .topnav{
     display: none;
-    text-align: center;
-    padding: 5px 15px;
+    text-align: right;
+    padding-top: 12px;
 }
 
 .topnav ul li {
-    margin-bottom: 8gipx;
+    margin-bottom: 8px;
 }
 
 .topnav ul li a{
@@ -448,7 +448,7 @@ transform: translateY(0px);
     }
     .hamburger i {
         font-size: 28px;
-        line-height: 56px;
+        margin-top: 12px;
     }
     .name {
         font-size: 42px;
@@ -536,13 +536,13 @@ transform: translateY(0px);
         font-size: 16px;
     }
     .mobile-nav{
-        width: 50%;
+        width: 70%;
         display: grid;
         justify-content: right;
     }
  
     .title{
-        width: 50%;
+        width: 30%;
     }
 
 }
