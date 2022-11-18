@@ -213,6 +213,7 @@ nav ul li + li {
     line-height: 60px;
     font-size: 50px;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 p {
@@ -501,7 +502,34 @@ transform: translateY(0px);
         font-size: 28px;
         line-height: 36px;
     }
-   
+    .about {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+    .image-of-me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        padding: 20px 0;
+        width: 350px;
+    }   
+    p{
+        width: 100%;
+    }
+    .about-wrapper {
+        width: 100%;
+    }
+    .name {
+        text-align: center;
+        width: 100%;
+        font-size: 32px;
+        line-height: 24px;
+    }
 }
 
 
@@ -515,12 +543,7 @@ transform: translateY(0px);
     .column {
         width: 100%;
     }
-    .name {
-        width: 60%;
-        font-size: 26px;
-        line-height: 25px;
-    }
-   
+
 }
 
 @media (max-width: 526px) {
@@ -538,12 +561,7 @@ transform: translateY(0px);
     .header-nav{
         display: none;
     }
-
-    .name {
-        line-height: 24px;
-        font-size: 28px;
-    }
-
+ 
     p {
         font-size: 16px;
     }
@@ -560,28 +578,6 @@ transform: translateY(0px);
 }
 
 @media (max-width: 450px) {
-    .about {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100vh;
-    }
-    p{
-        width: 100%;
-    }
-    .about-wrapper {
-        width: 100%;
-    }
-    .image-of-me{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    img{
-        padding: 20px 0;
-        width: 350px;
-    }
     nav ul li a {
         font-size: 12px;
     }
@@ -589,12 +585,6 @@ transform: translateY(0px);
         width: 10%;
     }
 
-    .name {
-        text-align: center;
-        width: 100%;
-        font-size: 26px;
-        line-height: 24px;
-    }
 
 }
 
@@ -654,7 +644,6 @@ transform: translateY(0px);
     }
     .name {
         width: 100%;
-        font-size: 24px;
     }
     img {
         width: 250px;
