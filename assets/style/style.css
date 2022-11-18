@@ -10,11 +10,9 @@
     --app-blue-hover: #068ab3;
     --app-span-colour: #0363ff;
     --app-dark-bg: #1a1d28;
+    --app-light-bg: #f0f2f4;
    }
 
-html {
-
-}
 body {
     background-color: var(--app-dark-bg);
 }
@@ -266,7 +264,7 @@ img {
 /* ---------------------------------------------------- */
 
 .contact-wrapper {
-    background-color: #ebeef3;
+    background-color: var(--app-light-bg);
     padding: 60px 0;
 }
 
