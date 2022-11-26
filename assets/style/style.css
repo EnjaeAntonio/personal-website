@@ -196,11 +196,16 @@ nav ul li + li {
 /* About me
 /* ---------------------------------------------------- */
 
+.about-bg {
+    background: rgb(255, 0, 0)url(../img/photo-1492573637402-25691cd9eac2.avif) center center / cover;
+    background-position: 97% 3%;
+}
 .about {
     display: flex;
     align-items: center;
     padding: 60px 0;
     height: 100vh;
+  
 }
 
 .about-wrapper{
