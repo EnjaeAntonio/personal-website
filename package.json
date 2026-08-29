@@ -1,0 +1,25 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Basic website I created to know more about me!",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnjaeAntonio/personal-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EnjaeAntonio/personal-website/issues"
+  },
+  "homepage": "https://github.com/EnjaeAntonio/personal-website#readme",
+  "devDependencies": {
+    "vite": "^8.2.2"
+  }
+}

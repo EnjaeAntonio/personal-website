@@ -1,76 +1,291 @@
 'use strict';
 
-// Utility Functions
-function onEvent(event, selector, callback) {
-    return selector.addEventListener(event, callback);
- }
-    
 
-function select(selector, parent = document) {
-    return parent.querySelector(selector);
- }
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
- function selectAll(selector, parent = document) {
-    return parent.querySelectorAll(selector);
- }
+const menuButton =
+    document.querySelector('.mobile-toggle');
+
+const mobileMenu =
+    document.querySelector('.mobile-nav');
+
+const menuIcon =
+    document.querySelector('.mobile-toggle i');
+
+const mobileLinks =
+    document.querySelectorAll('.mobile-nav a');
 
 
- function create(element, parent = document) {
-   return parent.createElement(element);
- }
+menuButton.addEventListener('click', () => {
 
- function log(content) {
-   console.log(content);
- }
 
-/*****************************************
-        Variables
-*****************************************/
-const aboutBtn = select('.about-btn'); 
-const contactBtn = select('.contact-btn');
-const navAbout = select('.about-me-btn')
-const navContact = select('.contact-me-btn')
-const hamburgerBtn = select('.fa-bars')
+    const menuIsOpen =
+        mobileMenu.classList.toggle('active');
 
-/*****************************************
-        Scroll to about
-*****************************************/
-onEvent('click', navAbout, function() {
-    const aboutPage = select('.about');
-    aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+
+    menuButton.setAttribute(
+        'aria-expanded',
+        menuIsOpen
+    );
+
+
+    if (menuIsOpen) {
+
+
+        menuIcon.classList.remove(
+            'fa-bars'
+        );
+
+
+        menuIcon.classList.add(
+            'fa-xmark'
+        );
+
+
+    } else {
+
+
+        menuIcon.classList.remove(
+            'fa-xmark'
+        );
+
+
+        menuIcon.classList.add(
+            'fa-bars'
+        );
+
+
+    }
+
+
 });
 
-/*****************************************
-        Scroll to contact
-*****************************************/
-onEvent('click', navContact, function() {
-    const aboutPage = select('footer');
-    aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+
+
+/* =====================================================
+   CLOSE MOBILE MENU WHEN LINK IS CLICKED
+===================================================== */
+
+mobileLinks.forEach(link => {
+
+
+    link.addEventListener('click', () => {
+
+
+        mobileMenu.classList.remove(
+            'active'
+        );
+
+
+        menuButton.setAttribute(
+            'aria-expanded',
+            'false'
+        );
+
+
+        menuIcon.classList.remove(
+            'fa-xmark'
+        );
+
+
+        menuIcon.classList.add(
+            'fa-bars'
+        );
+
+
+    });
+
+
 });
 
-/*****************************************
-        Scroll to about
-*****************************************/
-onEvent('click', aboutBtn, function() {
-    const aboutPage = select('.about');
-    aboutPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+const year =
+    document.querySelector('#year');
+
+
+year.textContent =
+    new Date().getFullYear();
+
+
+
+/* =====================================================
+   SCROLL REVEAL ANIMATIONS
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll('.reveal');
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+
+        entries => {
+
+
+            entries.forEach(entry => {
+
+
+                if (entry.isIntersecting) {
+
+
+                    entry.target.classList.add(
+                        'active'
+                    );
+
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+
+                }
+
+
+            });
+
+
+        },
+
+
+        {
+
+            threshold: 0.12,
+
+            rootMargin:
+                '0px 0px -60px 0px'
+
+        }
+
+
+    );
+
+
+
+revealElements.forEach(element => {
+
+
+    revealObserver.observe(
+        element
+    );
+
+
 });
 
-/*****************************************
-        Scroll to footer
-*****************************************/
-onEvent('click', contactBtn, function() {
-    const contactPage = select('footer');
-    contactPage.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-});
 
-/*****************************************
-        Hamburger icon
-*****************************************/
-onEvent('click', hamburgerBtn, function() {
-    let x = select('.topnav');
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else 
-      x.style.display = "block";
-  });
+
+/* =====================================================
+   HEADER BACKGROUND ON SCROLL
+===================================================== */
+
+const header =
+    document.querySelector('.header');
+
+
+window.addEventListener(
+    'scroll',
+    () => {
+
+
+        if (window.scrollY > 30) {
+
+
+            header.style.background =
+                'rgba(10, 10, 15, 0.92)';
+
+
+        } else {
+
+
+            header.style.background =
+                'rgba(10, 10, 15, 0.68)';
+
+
+        }
+
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+
+/* =====================================================
+   SUBTLE PROJECT MOUSE EFFECT
+===================================================== */
+
+const projects =
+    document.querySelectorAll('.project');
+
+
+projects.forEach(project => {
+
+
+    project.addEventListener(
+        'mousemove',
+        event => {
+
+
+            const rectangle =
+                project.getBoundingClientRect();
+
+
+            const x =
+                event.clientX -
+                rectangle.left;
+
+
+            const percentage =
+                (
+                    x /
+                    rectangle.width
+                ) * 100;
+
+
+            project.style.background = `
+
+                linear-gradient(
+
+                    90deg,
+
+                    rgba(
+                        113,
+                        87,
+                        255,
+                        ${0.03 + percentage / 2500}
+                    ),
+
+                    transparent
+
+                )
+
+            `;
+
+
+        }
+    );
+
+
+    project.addEventListener(
+        'mouseleave',
+        () => {
+
+
+            project.style.background =
+                'transparent';
+
+
+        }
+    );
+
+
+});
