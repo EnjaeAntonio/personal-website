@@ -1419,165 +1419,6 @@ img {
 
 }
 
-
-/* =====================================================
-   SKILLS
-===================================================== */
-
-.skills {
-
-    background:
-        var(--background-soft);
-
-}
-
-
-.skills-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        0.85fr
-        1.15fr;
-
-    gap: 120px;
-
-}
-
-
-.skills h2 {
-
-    font-size:
-        clamp(
-            3rem,
-            5vw,
-            5.5rem
-        );
-
-    line-height: 0.98;
-
-    letter-spacing: -4px;
-
-}
-
-
-.skills h2 em {
-
-    color:
-        var(--purple-light);
-
-    font-weight: 500;
-
-    font-style: italic;
-
-}
-
-
-.skills-list {
-
-    border-top:
-        1px solid
-        var(--line);
-
-}
-
-
-.skill-row {
-
-    display: grid;
-
-    grid-template-columns:
-        45px
-        1fr
-        50px;
-
-    align-items: center;
-
-    padding: 30px 0;
-
-    border-bottom:
-        1px solid
-        var(--line);
-
-    transition:
-        padding 0.4s
-        cubic-bezier(
-            0.16,
-            1,
-            0.3,
-            1
-        ),
-        background 0.3s ease;
-
-}
-
-
-.skill-row:hover {
-
-    padding-left: 12px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(
-                113,
-                87,
-                255,
-                0.06
-            ),
-            transparent
-        );
-
-}
-
-
-.skill-row span {
-
-    color:
-        var(--purple-light);
-
-    font-size: 0.65rem;
-
-}
-
-
-.skill-row h3 {
-
-    font-size: 1.15rem;
-
-    font-weight: 500;
-
-    letter-spacing: -0.5px;
-
-}
-
-
-.skill-row i {
-
-    color: #696974;
-
-    font-size: 1.45rem;
-
-    text-align: right;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
-
-}
-
-
-.skill-row:hover i {
-
-    color:
-        var(--purple-light);
-
-    transform:
-        scale(1.12);
-
-}
-
-
 /* =====================================================
    CONTACT
 ===================================================== */
@@ -1761,6 +1602,143 @@ img {
 
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.contact-content {
+    position: sticky;
+    top: 140px;
+}
+
+.contact-form {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(14px);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select option {
+    color: #111116;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    color: #563fc4;
+    background: white;
+    border: none;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.contact-submit i {
+    transition: transform 0.3s ease;
+}
+
+.contact-submit:hover i {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-content {
+        position: static;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-form {
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
 /* =====================================================
    FOOTER
